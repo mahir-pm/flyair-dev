@@ -74,8 +74,12 @@ Inspired by travel platforms like [MakeMyTrip](https://www.makemytrip.com), [Sky
 
 ---
 
-## 📂 Project Structure
+## 📂 Project Structure 🛠️ Tech Stack
 
-- `docs/` – Contains meeting summaries and project documentation.
-- `src/` – Application source code.
-- `README.md` – Project overview and usage instructions.
+| Component        | Technology             |
+|------------------|------------------------|
+| Frontend         | HTML, CSS, JavaScript  |
+| Backend          | Java, Spring Boot      |
+| Database         | MySQL                  |
+| DevOps           | GitHub, CI/CD Pipeline |
+| Project Tracking | Jira (Scrum Board)     |
