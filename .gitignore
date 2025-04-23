@@ -1,0 +1,73 @@
+# ===== Java / Spring Boot =====
+target/
+*.class
+*.jar
+*.war
+*.ear
+*.log
+
+# Maven
+.mvn/
+pom.xml.tag
+pom.xml.releaseBackup
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+
+# Gradle
+.gradle/
+build/
+!gradle/wrapper/gradle-wrapper.jar
+.gradle-cache/
+
+# IDEs
+/.idea/
+/*.iml
+*.ipr
+*.iws
+.vscode/
+*.swp
+*~
+
+# OS Files
+.DS_Store
+Thumbs.db
+
+# Node/npm (frontend build tools if used)
+node_modules/
+npm-debug.log
+yarn-error.log
+dist/
+build/
+
+# Environment & Config
+.env
+*.env
+.env.*.local
+
+# Database
+*.sql
+*.dump
+*.db
+*.sqlite
+
+# Logs & Temp
+*.log
+*.tmp
+*.bak
+
+# JetBrains IDEs
+.idea/
+*.iws
+*.iml
+out/
+
+# VS Code
+.vscode/
+
+# Misc
+logs/
+*.bak
+*.tmp
+*.log
+*.swp
