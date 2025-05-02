@@ -1,0 +1,45 @@
+for hotel and flight:
+1.1:
+http://localhost:8080/api/search/flights?source=Delhi&destination=Mumbai&minPrice=3000&maxPrice=5000
+http://localhost:8080/api/search/hotels?location=Delhi&minPrice=1000&maxPrice=10000
+
+1.2:
+http://localhost:8080/api/search/comparison?source=Delhi&destination=Mumbai&location=Delhi&minPrice=3000&maxPrice=10000
+
+1.3:
+POST http://localhost:8080/api/booking/create?flightId=3&hotelId=5&mealIncluded=true&extraLuggage=true
+
+1.4:
+GET http://localhost:8080/api/booking/history
+GET http://localhost:8080/api/booking/history?startDate=2025-04-28T00:00:00&endDate=2025-05-10T00:00:00
+PUT http://localhost:8080/api/booking/modify?bookingId=2&mealIncluded=true&extraLuggage=false
+PUT http://localhost:8080/api/booking/cancel?bookingId=2
+
+1.5:
+GET http://localhost:8080/api/booking/preview?flightId=3&hotelId=5&mealIncluded=true&extraLuggage=false
+
+1.6:
+POST http://localhost:8080/api/booking/payment?bookingId=2&paymentMethod=CreditCard
+
+2.1:
+GET http://localhost:8080/api/admin/dashboard
+GET http://localhost:8080/api/admin/dashboard?startDate=2025-04-01T00:00:00&endDate=2025-04-30T23:59:59
+GET http://localhost:8080/api/admin/dashboard?location=Delhi
+GET http://localhost:8080/api/admin/dashboard?status=Paid
+
+2.2:
+PUT http://localhost:8080/api/admin/flight/update?flightId=3&price=4200&available=false
+PUT http://localhost:8080/api/admin/hotel/update?hotelId=5&pricePerNight=9500&rating=5
+
+2.3:
+GET http://localhost:8080/api/admin/dashboard
+
+Inside Authorization Basic Auth with Username: admin and Password: admin123
+
+3.1:
+Both api are same for preview and create booking
+
+3.2:
+GET http://localhost:8080/api/search/flights?source=Delhi&destination=Mumbai&minPrice=3000&maxPrice=5000
+
+done second request it has not fetched from database it has fetched it from cache.
