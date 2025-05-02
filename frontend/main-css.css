@@ -1,0 +1,410 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    font-family: 'Inter', sans-serif; 
+}
+
+.booking-section {
+    background-color: #040055;
+    color: #fff;
+    padding: 40px 20px;
+}
+
+.logo img {
+    width: 252px;
+    height: 189px; 
+    vertical-align: bottom;
+    margin-top: -40px;
+}
+
+.logo h2 {
+    color: #fff;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 38px;
+    padding-left: 22px;
+    margin-top: -62px;
+}
+
+.log-btn {
+    background-color: #f4f4f4;
+    height: 50px;
+    width: 140px;
+    border-radius: 12px;
+    color: #000;
+    text-align: center;
+    vertical-align: text-middle;
+    font-size: 21px;
+    font-family: 'Inter', sans-serif;
+    line-height: auto;
+    border-style: hidden;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.log-btn:hover {
+    background-color: #ddd; /* Added hover effect */
+}
+
+/* General form styling */
+form {
+    padding: 30px;
+    margin-top: 30px;
+}
+
+.form-control,
+.btn {
+    border-radius: 20px;
+}
+
+/* Radio button */
+.radio-btn label {
+    color: #fff;
+    font-size: 28px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+}
+
+input[type="radio"] {
+    accent-color: #FFA500;
+}
+
+/* Input styles */
+input.form-control,
+select.form-control {
+    background-color: #fff;
+    height: 111px;
+    border: none !important;
+    box-shadow: none !important;
+    outline: none !important;
+    border-radius: 0px;
+}
+
+.from-css input {
+    border-radius: 25px 0px 0px 25px !important;
+}
+
+.to-css input {
+    border-radius: 0px 25px 25px 0px !important;
+}
+
+.cabin-css select {
+    border-radius: 0px 25px 25px 0px !important;
+}
+
+/* Arrow icon styles */
+.position-relative {
+    position: relative;
+}
+
+.arrow-icon-wrapper {
+    position: absolute;
+    top: 50%;
+    left: calc(8.45% + 8.33%);
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    pointer-events: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    height: auto;
+}
+
+.arrow-icon-wrapper img {
+    width: 35px;
+    height: auto;
+}
+
+.search-btn {
+    background-color: #ffb300;
+    padding: 10px 40px;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    color: #fff;
+    font-size: 28px; 
+    font-family: 'Inter', sans-serif;
+    border: none;
+    outline: none;
+    height: auto;
+    min-height: 50px;
+    text-align: center;
+    white-space: nowrap;
+    margin-left: 10px;
+}
+
+.search-btn:hover {
+    background-color: #e69500;
+    color: #fff;
+}
+
+
+/* Tab container styles */
+.custom-tabs-container {
+  display: flex;
+  gap: 24px;
+  padding: 16px 0;
+  border-bottom: 1px solid #ccc;
+  justify-content: flex-start;
+}
+
+/* Tab links */
+.custom-tab-link {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  position: relative;
+  padding-bottom: 6px;
+  transition: color 0.3s ease;
+}
+
+/* Tab hover effect */
+.custom-tab-link:hover {
+  color: #ffb300;
+  border-bottom: 2px solid #ffb300;
+}
+
+/* Active tab link style */
+.custom-tab-link.custom-active {
+  color: #ffb300;
+  border-bottom: 2px solid #ffb300;
+}
+
+/* Tab content visibility control */
+.custom-tab-content {
+  display: none;
+  margin-top: 20px;
+  padding: 20px 0px;
+  text-align: left;
+  background-color: #fff;
+  color: #333;
+  border-radius: 10px;
+/*  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);*/
+}
+
+.custom-tab-content.custom-active {
+  display: block;
+}
+
+/* Content typography */
+.custom-tab-content h5 {
+  font-size: 1.25rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.custom-tab-content p {
+  font-size: 28;
+  color: #000;
+  line-height: 1.6;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+}
+
+/* Wrapper spacing */
+.custom-tab-wrapper {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+
+/* Adjusting layout of the container and other elements */
+/*.container-fluid {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}*/
+
+/* Input focus styles */
+input:focus, select:focus {
+    outline: 2px solid #ffb300; /* Highlight focus with orange border */
+    box-shadow: 0 0 5px rgba(255, 179, 0, 0.5); /* Subtle glow effect on focus */
+}
+
+
+ 
+
+    .login-section {
+      min-height: 100vh;
+    }
+
+    .login-left,
+    .login-right {
+      display: flex;
+      flex-direction: column;
+      padding: 40px 20px;
+    }
+
+    .login-left {
+      background-color: #fff;
+    }
+
+    .login-right {
+      background-color: #040055;
+      color: white;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .logo {
+      margin-bottom: 20px;
+    }
+
+    .login-form-wrapper {
+      flex-grow: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .login-form h2 {
+      color: #000000;
+      text-align: center;
+      font-size: 45px;
+      font-weight: 800;
+      font-family: Rubik;
+    }
+
+    .login-page input.form-control {
+        background-color: #F4F4F4 !important;
+        width: 65%; 
+        height: 55px;
+        border: none;
+        box-shadow: none;
+        border-radius: 50px;
+        margin: 0 auto 12px auto;
+        display: block; 
+    }
+
+    .submit-btn {
+      background-color: #ffb300;
+      padding: 10px 40px;
+      border-radius: 30px;
+      color: #fff;
+      font-size: 28px;
+      font-family: 'Inter', sans-serif;
+      border: none;
+      margin-top: 30px;
+    }
+
+    .submit-btn:hover {
+      background-color: #e69500;
+      color: #fff;
+    }
+
+    .signin-form h2 {
+      font-size: 45px;
+      font-family: Rubik;
+    }
+
+    .signin-form p {
+      font-size: 25px;
+      margin-bottom: 30px;
+      font-family: Rubik;
+    }
+
+    .Sign-up-btn {
+      background-color: #fff;
+      padding: 10px 40px;
+      border-radius: 30px;
+      color: #000;
+      font-size: 28px;
+      font-family: 'Inter', sans-serif;
+      border: none;
+    }
+
+    .Sign-up-btn:hover {
+      background-color: #e69500;
+      color: #fff;
+    }
+
+    @media (max-width: 767.98px) {
+      .login-section .row {
+        flex-direction: column;
+      }
+
+      .login-left,
+      .login-right {
+        width: 100%;
+        padding: 30px;
+      }
+
+      .login-form-wrapper {
+        justify-content: flex-start;
+        margin-top: 30px;
+      }
+    }
+
+    .user-icon img{
+        margin-left: 40px;
+        margin-right: 20px;
+    }
+
+    .compare-btn a{
+        color:#ffffff;
+        text-align:center;
+        vertical-align:text-top;
+        font-size:28px;
+       font-family: 'Inter', sans-serif;
+        font-weight: 400;
+        line-height:auto;
+        border-style:hidden;
+        outline:none;
+        text-decoration: none;
+        margin-bottom: 20px;
+    }
+
+
+
+    .cards-section{
+        background-color: #f4f4f4;
+        padding: 20px;
+        margin: 0;
+    }
+
+  .card-container {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+      margin-top: 40px;
+
+    }
+
+    .cards-section h2{
+        color:#000000;
+        text-align:left;
+        vertical-align:text-top;
+        font-size:34px;
+        font-family:Inter;
+        line-height:auto;
+        border-style:hidden;
+        outline:none;
+        margin-left: 50px;
+    }
+
+    .card {
+        background-color: #fff;
+        border-radius: 15px;
+        padding: 20px;
+        width: 350px;
+        box-shadow: 0 2px 5px rgba(255, 255, 255, 1);
+        margin: 10px;
+        color:#000000;
+        text-align:left;
+        vertical-align:text-top;
+        font-size:24px;
+        font-family:Inter;
+    }
+
+    .card-sec1{
+        margin-bottom: 10px;
+    }
+
+    .price {
+      float: right;
+    }

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FLYAIR</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="tabs">
+        <button class="tab-button" id="login-tab" onclick="showTab('login')">Log In</button>
+        <button class="tab-button" id="signup-tab" onclick="showTab('signup')">Sign Up</button>
+        <button class="tab-button" id="search-tab" onclick="showTab('search')">Search</button>
+        <button class="tab-button" id="payment-tab" onclick="showTab('payment')">Payment</button>
+        <button class="tab-button" id="admin-tab" onclick="showTab('admin')">Admin</button>
+    </div>
+
+    <div id="login" class="tab-content">
+        <h2>Log In</h2>
+        <form id="login-form">
+            <label for="login-email">Email:</label>
+            <input type="email" id="login-email" name="email" required>
+
+            <label for="login-password">Password:</label>
+            <input type="password" id="login-password" name="password" required>
+
+            <button type="submit">Log In</button>
+        </form>
+        <p>Don't have an account? <a href="javascript:void(0)" id="switch-to-signup">Sign Up here</a></p>
+    </div>
+
+    <div id="signup" class="tab-content" style="display: none;">
+        <h2>Sign Up</h2>
+        <form id="signup-form">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <button type="submit">Sign Up</button>
+        </form>
+        <p>Already have an account? <a href="javascript:void(0)" id="switch-to-login">Log In here</a></p>
+    </div>
+
+    <div id="search" class="tab-content" style="display: none;">
+        <h2>Search Flights and Hotels</h2>
+        <form id="search-form">
+            <input type="text" id="Departure" placeholder="Departure" required>
+            <input type="text" id="destination" placeholder="Destination" required>
+            <input type="date" id="departure-date" required>
+            <input type="date" id="return-date">
+            <button type="submit">Search</button>
+        </form>
+        <div id="results">
+            <h3>Results</h3>
+            <ul id="result-list">
+            </ul>
+        </div>
+    </div>
+
+    <div id="payment" class="tab-content" style="display: none;">
+        <h3>Booking Summary</h3>
+        <p><strong>Flight:</strong> Flight details here</p>
+        <p><strong>Hotel:</strong> Hotel details here</p>
+        <p><strong>Extras:</strong> Meals, luggage</p>
+        <p><strong>Total Cost:</strong> $450</p>
+
+        <h4>Payment Information</h4>
+        <form id="payment-form">
+            <input type="text" id="card-number" placeholder="Card Number" required>
+            <input type="text" id="card-expiry" placeholder="Expiry Date" required>
+            <input type="text" id="card-cvc" placeholder="CVC" required>
+            <button type="submit">Confirm Booking</button>
+        </form>
+    </div>
+
+    <div id="admin" class="tab-content" style="display: none;">
+        <h3>Admin Dashboard</h3>
+        <div id="admin-options">
+            <button id="manage-users">Manage Users</button>
+            <button id="manage-listings">Manage Listings</button>
+        </div>
+        <div id="user-management" style="display: none;">
+            <h4>User Management</h4>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

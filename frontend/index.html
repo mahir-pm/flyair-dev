@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Flyair - Flights & Tickets</title>
+   <!-- Favicon -->
+  <link href="images/favicon.ico" rel="icon">
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="main-css.css" rel="stylesheet">
+
+   <style>
+    .rev-gap{
+      margin-top: -2rem !important;
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="booking-section text-center">
+    <div class="container-fluid">
+      <div class="row d-flex">
+
+        <div class="col-md-6 col-6 text-start">
+          <div class="d-inline-block align-bottom logo">
+             <a href="index.html"> <img src="images/flyair-logo.svg" alt="flyair-logo"></a>
+            <h2 class="ms-2 mb-0 align-bottom">Flights & Tickets</h2>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-6 d-flex justify-content-end">
+         <a href="login.html"> <button class="btn btn-light mt-3 float-end log-btn">Log in</button></a>
+        </div>
+
+      </div>
+
+      <div class="row d-flex">
+        <div class="col-md-12 col-12">
+          <form action="#" method="POST">
+            <!-- Trip type selection -->
+            <div class="d-flex justify-content-start mb-3 radio-btn">
+              <label class="tab-btn me-3">
+                <input type="radio" name="trip" value="one-way" checked> One way
+              </label>
+              <label class="tab-btn">
+                <input type="radio" name="trip" value="return"> Return
+              </label>
+            </div>
+
+            <!-- Flight search fields -->
+            <div class="row g-2 justify-content-start position-relative">
+              <div class="col-md-2 from-css">
+                <input type="text" name="from" class="form-control" placeholder="From" required>
+              </div>
+
+              <!-- Overlapping arrow icon -->
+              <div class="arrow-icon-wrapper">
+                <img src="images/arrow-icon.svg" alt="arrow icon">
+              </div>
+
+              <div class="col-md-2 to-css">
+                <input type="text" name="to" class="form-control" placeholder="To" required>
+              </div>
+
+              <div class="col-md-2">
+                <input type="date" name="depart" class="form-control" required>
+              </div>
+              <div class="col-md-2">
+                <input type="date" name="return" class="form-control">
+              </div>
+              <div class="col-md-2 cabin-css">
+                <select name="cabin" class="form-control">
+                  <option value="">Cabin Class</option>
+                  <option value="economy">Economy</option>
+                  <option value="business">Business</option>
+                  <option value="first">First Class</option>
+                </select>
+              </div>
+
+              <div class="col-md-auto d-flex align-items-center">
+                <button type="submit" class="search-btn">Search</button>
+              </div>
+
+            </div>
+          </form>
+        </div>
+      </div>
+
+    
+    </div>
+  </div>
+
+
+  <div class="container-fluid my-5 rev-gap">
+  <div class="row">
+    <div class="col-md-12 col-12">
+      
+      <div class="custom-tab-wrapper">
+        <div class="custom-tabs-container">
+          <a href="#" class="custom-tab-link" data-tab="custom-deals">Flight Deals</a>
+          <a href="#" class="custom-tab-link" data-tab="custom-airline">Airline Info</a>
+          <a href="#" class="custom-tab-link" data-tab="custom-budget">Budget Tips</a>
+          <a href="#" class="custom-tab-link" data-tab="custom-faqs">FAQs</a>
+          <a href="#" class="custom-tab-link" data-tab="custom-top">Top Airlines</a>
+        </div>
+
+        <div class="custom-tab-content custom-active" id="custom-deals">
+          <h5>✈️ Welcome to Flight Air</h5>
+          <p>At Flight Air, we’re redefining the way you fly. With a focus on comfort, convenience, and affordability, we connect travelers to destinations around the globe—seamlessly and efficiently. Whether you're booking a last-minute business trip or planning the vacation of a lifetime, our intuitive platform and world-class service make flying simpler and more enjoyable than ever.</p>
+        </div>
+        <div class="custom-tab-content" id="custom-airline">
+          <h5>🛫 Airline Information</h5>
+          <p>Flight Air partners with top-rated carriers to ensure safe, reliable, and comfortable travel experiences.</p>
+        </div>
+        <div class="custom-tab-content" id="custom-budget">
+          <h5>💡 Budget Travel Tips</h5>
+          <p>Learn how to travel smart with money-saving advice, packing tricks, and destination hacks for budget-conscious flyers.</p>
+        </div>
+        <div class="custom-tab-content" id="custom-faqs">
+          <h5>❓ Frequently Asked Questions</h5>
+          <p>Need help? Check our FAQ section for answers to common queries about bookings, baggage, cancellations, and more.</p>
+        </div>
+        <div class="custom-tab-content" id="custom-top">
+          <h5>🌍 Top Airlines We Work With</h5>
+          <p>We collaborate with global airlines like Emirates, Qatar Airways, Lufthansa, and more to get you where you need to go.</p>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+</div>
+
+
+ 
+
+<!-- Js code -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const tabLinks = document.querySelectorAll('.custom-tab-link');
+      const tabContents = document.querySelectorAll('.custom-tab-content');
+
+      tabLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+          e.preventDefault();
+
+          tabLinks.forEach(tab => tab.classList.remove('custom-active'));
+          tabContents.forEach(content => content.classList.remove('custom-active'));
+
+          this.classList.add('custom-active');
+          const tabId = this.getAttribute('data-tab');
+          const activeContent = document.getElementById(tabId);
+          activeContent.classList.add('custom-active');
+        });
+      });
+
+      // Set the first tab as active on page load
+      tabLinks[0].classList.add('custom-active');
+      tabContents[0].classList.add('custom-active');
+    });
+</script>
+
+</body>
+</html>
